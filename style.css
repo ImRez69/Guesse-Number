@@ -43,6 +43,7 @@ h1 {
 main {
   display: flex;
   justify-content: center;
+  width: 40%;
 }
 
 #toggle-theme {
@@ -95,7 +96,8 @@ main {
   margin-bottom: 4.5px;
 }
 
-.number-btn:active {
+.number-btn:active,
+#restart-btn:active {
   box-shadow: 0px 2px 2px rgb(3, 90, 107);
   transform: scale(0.95);
   color: rgba(255, 255, 255, 0.8);
@@ -103,7 +105,22 @@ main {
 
 #clear,
 #btn-submit {
-  font-size: 16px;
+  font-size: 1rem;
+}
+
+#restart-btn,
+span.end-game-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  background: rgb(2, 61, 73);
+  border-radius: 20px;
+  box-shadow: 0px 4.5px 2px rgb(3, 90, 107);
+  transition: all 100ms linear;
+  font-size: 1rem;
+  margin-bottom: 16px;
 }
 
 .notification {

@@ -30,6 +30,7 @@ const onClick = (e) => {
   }
 };
 
+
 function checkAnswer(answer) {
   userGuesse += 1;
   switch (true) {
@@ -43,6 +44,7 @@ function checkAnswer(answer) {
         "currect",
         4000
       );
+      endGame();
       return;
 
     case answer !== correctAnswer:
@@ -72,6 +74,7 @@ function showNotification(message, type, duration) {
   notification.innerHTML = `
   <span class="notification-close">🗙</span>
   <span class="notification-message">${message}</span>
+  <span class="notification-close">🗙</span>
   `;
 
   // Add Event To Notification
@@ -103,4 +106,14 @@ function showNotification(message, type, duration) {
   }, duration);
 }
 
-addEventListener("click", onClick);
+function endGame() {
+  numberForm.innerHTML = `
+  <button id="restart-btn">Restart</button>
+  <span class="end-game-message">Your Gusses: ${userGuesse}</span>
+  <span class="end-game-message">Currect Answer: ${correctAnswer}</span>
+  `;
+  document.getElementById("restart-btn").addEventListener("click", () => window.location.reload());
+  userGuesse, correctAnswer;
+}
+
+numberForm.addEventListener("click", onClick);
