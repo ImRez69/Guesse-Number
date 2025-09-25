@@ -53,8 +53,6 @@ function checkAnswer(answer) {
   }
 }
 
-addEventListener("click", onClick);
-
 function showNotification(message, type, duration) {
   // Create Notification Element
   const notification = document.createElement("div");
@@ -93,3 +91,5 @@ function showNotification(message, type, duration) {
     }, 500);
   }, duration);
 }
+
+addEventListener("click", onClick);
