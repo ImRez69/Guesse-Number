@@ -34,10 +34,15 @@ body {
 
 header {
   padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-h1 {
-  text-align: center;
+header span {
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
 
 main {
