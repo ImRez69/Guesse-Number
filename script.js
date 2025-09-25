@@ -30,7 +30,6 @@ const onClick = (e) => {
   }
 };
 
-
 function checkAnswer(answer) {
   userGuesse += 1;
   switch (true) {
@@ -112,7 +111,9 @@ function endGame() {
   <span class="end-game-message">Your Gusses: ${userGuesse}</span>
   <span class="end-game-message">Currect Answer: ${correctAnswer}</span>
   `;
-  document.getElementById("restart-btn").addEventListener("click", () => window.location.reload());
+  document
+    .getElementById("restart-btn")
+    .addEventListener("click", () => window.location.reload());
   userGuesse, correctAnswer;
 }
 
