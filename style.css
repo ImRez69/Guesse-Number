@@ -59,7 +59,7 @@ main {
 }
 
 #number-form {
-  width: 70%;
+  width: max(45%, 250px);
   margin-top: 20px;
   padding: 8px;
   border-radius: 8px;
