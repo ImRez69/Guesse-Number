@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
   font-family: Atma;
   src: local("Atma-Regular"),
     url(./Source/Font/Atma-Regular.ttf) format(truetype);
-}
+} */
 
 :root {
   color-scheme: dark;
@@ -14,7 +14,7 @@
   padding: 0;
   border: none;
   outline: none;
-  font-family: Atma;
+  /* font-family: Atma; */
 }
 
 input::-webkit-outer-spin-button,

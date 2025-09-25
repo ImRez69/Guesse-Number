@@ -35,21 +35,35 @@ function checkAnswer(answer) {
   userGuesse += 1;
   switch (true) {
     case answer === "":
-      showNotification("Input Is Empty", "empty-input", 3000);
+      showNotification("Input Is Empty", "empty-input", 4000);
       return;
 
     case answer === correctAnswer:
       showNotification(
         `Your Guesse Is Currect With ${userGuesse} Guesses`,
         "currect",
-        3000
+        4000
       );
       return;
 
     case answer !== correctAnswer:
-      showNotification("Your Guesse Is Wrong", "wrong", 3000);
-      // console.log(`Your Answer: ${answer} || Currect Answer: ${correctAnswer}`);
-      return;
+      // showNotification("Your Guesse Is Wrong", "wrong", 4000);
+      console.log(`Your Answer: ${answer} || Currect Answer: ${correctAnswer}`);
+      if (+answer > +correctAnswer) {
+        showNotification(
+          "Your Guesse Is Wrong ( Bigger Than Currect Answer )",
+          "wrong",
+          4000
+        );
+        return;
+      } else if (+answer < +correctAnswer) {
+        showNotification(
+          "Your Guesse Is Wrong ( Smaller Than Currect Answer )",
+          "wrong",
+          4000
+        );
+        return;
+      }
   }
 }
 
