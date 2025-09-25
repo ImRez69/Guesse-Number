@@ -3,7 +3,6 @@ const numberDiv = document.getElementById("number-div");
 const numberInput = document.getElementById("number-input");
 const correctAnswer = Math.floor(Math.random() * 100 + 1).toString();
 let userGuesse = 0;
-
 const onClick = (e) => {
   e.preventDefault();
 
@@ -47,8 +46,7 @@ function checkAnswer(answer) {
       return;
 
     case answer !== correctAnswer:
-      // showNotification("Your Guesse Is Wrong", "wrong", 4000);
-      console.log(`Your Answer: ${answer} || Currect Answer: ${correctAnswer}`);
+      // console.log(`Your Answer: ${answer} || Currect Answer: ${correctAnswer}`);
       if (+answer > +correctAnswer) {
         showNotification(
           "Your Guesse Is Wrong ( Bigger Than Currect Answer )",
@@ -78,12 +76,11 @@ function showNotification(message, type, duration) {
 
   // Add Event To Notification
   notification.addEventListener("click", (e) => {
-    if (e.target.classList.contains("notification-close")) {
-      setTimeout(() => {
-        notification.remove();
-      }, 500);
-      notification.classList.remove("show");
-    }
+    setTimeout(() => {
+      notification.remove();
+    }, 500);
+    notification.classList.remove("show");
+    notification.classList.add("hide");
   });
 
   // Add Notification To Body Element
