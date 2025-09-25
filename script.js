@@ -1,8 +1,7 @@
 const numberForm = document.getElementById("number-form");
 const numberDiv = document.getElementById("number-div");
 const numberInput = document.getElementById("number-input");
-// const correctAnswer = Math.floor(Math.random() * 100 + 1).toString();
-const correctAnswer = "100";
+const correctAnswer = Math.floor(Math.random() * 100 + 1).toString();
 let userGuesse = 0;
 const onClick = (e) => {
   e.preventDefault();
