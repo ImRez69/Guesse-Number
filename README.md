@@ -5,4 +5,4 @@ No additional dependencies or build steps are required, as the project uses vani
 - Also, you can run `index.html` [Here](https://htmlpreview.github.io/?https://github.com/ImRez69/Guesse-Number/blob/main/index.html).
 
 # Notice 
-You Can Uncomment [console.log(`Your Answer: ${answer} || Currect Answer: ${correctAnswer}`);] For Debugging or Testing
+You Can Uncomment [ console.log(`Your Answer: ${answer} || Currect Answer: ${correctAnswer}`); ] For Debugging or Testing
