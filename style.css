@@ -156,3 +156,27 @@ span.end-game-message {
 .notification:hover .notification-close {
   color: rgb(255, 255, 255);
 }
+
+@media (max-width: 400px) {
+  .notification {
+    width: 94%;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    padding: 4px;
+    text-align: center;
+  }
+
+  .notification-close {
+    display: none;
+  }
+
+  .notification.show {
+    top: 30px;
+  }
+
+  .notification.hide {
+    top: -20px;
+  }
+}
