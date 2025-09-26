@@ -107,51 +107,14 @@ function showNotification(message, type, duration) {
 }
 
 function endGame() {
-  //   numberForm.innerHTML = `
-  //   <button id="restart-btn">Restart</button>
-  //   <span class="end-game-message">Your Gusses: ${userGuesse}</span>
-  //   <span class="end-game-message">Currect Answer: ${correctAnswer}</span>
-  //   `;
-  //   document
-  //     .getElementById("restart-btn")
-  //     .addEventListener("click", () => window.location.reload());
-  //   userGuesse, correctAnswer;
-  // ----------------------
-
-  // Button Element
-  const restartBtn = document.createElement("button");
-  restartBtn.id = "restart-btn";
-  restartBtn.textContent = "Restart";
-  restartBtn.addEventListener("click", () => {
-    window.location.reload();
-  });
-
-  setTimeout(() => {
-    restartBtn.classList.add("show");
-  }, 200);
-  numberForm.appendChild(restartBtn);
-
-  // Guesses Span Element
-  const guesseSpan = document.createElement("span");
-  guesseSpan.className = "end-game-message";
-  guesseSpan.textContent = `Your Gusses: ${userGuesse}`;
-  setTimeout(() => {
-    guesseSpan.classList.add("show");
-  }, 200);
-  numberForm.appendChild(guesseSpan);
-
-  // Answer Span Element
-  const answerSpan = document.createElement("span");
-  answerSpan.className = "end-game-message";
-  answerSpan.textContent = `Currect Answer: ${correctAnswer}`;
-  setTimeout(() => {
-    answerSpan.classList.add("show");
-  }, 200);
-  numberForm.appendChild(answerSpan);
-
-  // Hide Number Elements
-  numberDiv.classList.add("hide");
-  numberInput.classList.add("hide");
+  numberForm.innerHTML = `
+    <button id="restart-btn">Restart</button>
+    <span class="end-game-message">Your Gusses: ${userGuesse}</span>
+    <span class="end-game-message">Currect Answer: ${correctAnswer}</span>
+    `;
+  document
+    .getElementById("restart-btn")
+    .addEventListener("click", () => window.location.reload());
 }
 
 numberForm.addEventListener("click", onClick);

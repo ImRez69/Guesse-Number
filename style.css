@@ -77,13 +77,6 @@ main {
   gap: 12px;
 }
 
-#number-div.hide,
-#number-input.hide {
-  transform: scale(0);
-  width: 0;
-  height: 0;
-}
-
 .number-btn {
   height: 3rem;
   flex-basis: calc(33.333% - 12px);
@@ -122,12 +115,6 @@ span.end-game-message {
   font-size: 1rem;
   margin-bottom: 16px;
   padding: 24px;
-  transform: scale(0);
-}
-
-#restart-btn.show,
-span.end-game-message.show {
-  transform: scale(1);
 }
 
 .notification {
