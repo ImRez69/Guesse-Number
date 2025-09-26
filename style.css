@@ -59,6 +59,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 200ms linear;
 }
 
 #number-input {
@@ -74,6 +75,13 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+#number-div.hide,
+#number-input.hide {
+  transform: scale(0);
+  width: 0;
+  height: 0;
 }
 
 .number-btn {
@@ -110,10 +118,16 @@ span.end-game-message {
   background: rgb(2, 61, 73);
   border-radius: 20px;
   box-shadow: 0px 4.5px 2px rgb(3, 90, 107);
-  transition: all 100ms linear;
+  transition: all 200ms linear;
   font-size: 1rem;
   margin-bottom: 16px;
   padding: 24px;
+  transform: scale(0);
+}
+
+#restart-btn.show,
+span.end-game-message.show {
+  transform: scale(1);
 }
 
 .notification {
